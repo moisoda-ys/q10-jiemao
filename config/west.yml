@@ -2,15 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
+    - name: moisoda-ys
+      url-base: https://github.com/moisoda-ys
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3.0
       import: app/west.yml
     - name: zmk-dongle-display
-      remote: englmaxi
-      revision: v0.3
+      remote: moisoda-ys
+      revision: q10-large-status
   self:
     path: config
