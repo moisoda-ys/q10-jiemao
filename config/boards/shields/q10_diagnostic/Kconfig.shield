@@ -1,0 +1,3 @@
+config SHIELD_Q10_DIAGNOSTIC
+    bool
+    default y

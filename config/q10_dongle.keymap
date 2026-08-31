@@ -1,0 +1,28 @@
+/*
+ * Q10 central keymap for the XIAO BLE dongle.
+ *
+ * The Q10 sends its matrix events to the dongle, so this is the keymap that
+ * determines the resulting host input.
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "QWERTY";
+            bindings = <
+                &mkp LCLK                                                                            &mkp RCLK
+                &kp CLCK              &kp LGUI              &mkp LCLK              &kp ESC           &kp TAB
+                &kp Q   &kp W   &kp E  &kp R  &kp T    &kp Y   &kp U   &kp I   &kp O   &kp P
+                &kp A   &kp S   &kp D  &kp F  &kp G    &kp H   &kp J   &kp K   &kp L   &kp BSPC
+                &kp LSHFT &kp Z &kp X  &kp C  &kp V    &kp B   &kp N   &kp M   &kp COMMA &kp ENTER
+                &kp LCTRL             &kp LALT              &kp SPACE              &kp SPACE         &kp RALT
+            >;
+        };
+    };
+};

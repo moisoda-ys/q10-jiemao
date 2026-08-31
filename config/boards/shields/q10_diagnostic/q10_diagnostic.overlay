@@ -1,0 +1,4 @@
+&bbtrackpad_listener {
+    status = "okay";
+    device = <&bbtrackpad>;
+};
