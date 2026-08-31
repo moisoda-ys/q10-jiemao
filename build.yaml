@@ -1,11 +1,11 @@
 ---
 include:
-  - board: xiao_ble
+  - board: nice_nano_v2
     shield: q10_dongle dongle_display
   - board: zitaotech_q10
 
   # Flash these once to clear saved Bluetooth/settings data.
-  - board: xiao_ble
+  - board: nice_nano_v2
     shield: settings_reset
   - board: zitaotech_q10
     shield: settings_reset

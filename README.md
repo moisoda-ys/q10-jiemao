@@ -1,19 +1,20 @@
-# Q10 + XIAO BLE OLED dongle
+# Q10 + nRF52840 OLED dongle
 
 This repository builds a ZMK split configuration for a ZitaoTech Q10 and the
-Seeed XIAO BLE OLED dongle based on `zmk-dongle-display`.
+nRF52840/nice!nano-compatible OLED dongle based on `zmk-dongle-display`.
 
 The dongle is the split central: connect it to a host over USB. The Q10
 connects to the dongle over Bluetooth and keeps the Q10 keymap.
 
-The 128x64 SSD1306 OLED uses the XIAO BLE I2C bus. Its status screen shows only
-the active Q10 layer, USB or Bluetooth output mode, and the Q10 battery level.
+The 1.3-inch SH1106 OLED uses the pro-micro I2C bus with the required
+two-segment offset. Its status screen shows only the active Q10 layer, USB or
+Bluetooth output mode, and the Q10 battery level.
 
 ## Firmware artifacts
 
 GitHub Actions builds four UF2 files:
 
-- `xiao_ble_q10_dongle_dongle_display-zmk.uf2` - flash this to the OLED dongle.
+- `nice_nano_v2_q10_dongle_dongle_display-zmk.uf2` - flash this to the OLED dongle.
 - `zitaotech_q10-zmk.uf2` - flash this to the Q10.
 - The two `settings_reset` artifacts erase saved Bluetooth/settings data.
 
