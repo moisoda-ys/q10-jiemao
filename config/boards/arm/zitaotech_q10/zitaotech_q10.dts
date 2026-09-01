@@ -179,8 +179,8 @@ RC(6,1)          RC(6,0)             RC(5,0)             RC(2,0)          RC(3,2
 / {
     bbtrackpad_listener: bbtrackpad_listener {
         compatible = "zmk,input-listener";
-        status = "disabled";
-        device = <&bbtrackpad_split>;
+        status = "okay";
+        device = <&bbtrackpad>;
     };
 
     split_inputs {
@@ -197,12 +197,6 @@ RC(6,1)          RC(6,0)             RC(5,0)             RC(2,0)          RC(3,2
 &bbtrackpad_split {
     device = <&bbtrackpad>;
 };
-
-&bbtrackpad_listener {
-    status = "disabled";
-};
-
-
 
 &spi3 {
     compatible = "nordic,nrf-spim";
@@ -359,4 +353,3 @@ zephyr_udc0: &usbd {
         };
     };
 };
-
