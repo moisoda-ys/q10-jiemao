@@ -12,19 +12,14 @@ Bluetooth output mode, and the Q10 battery level.
 
 ## Firmware artifacts
 
-GitHub Actions builds firmware for both dongle variants:
+GitHub Actions builds two UF2 files:
 
-- `nice_nano_v2_q10_dongle_dongle_display-zmk.uf2` - flash this to the OLED dongle.
-- `q10_st7789_dongle-zmk.uf2` - flash this to the original nRF52840/ST7789 dongle.
-- `zitaotech_q10-zmk.uf2` - flash this to the Q10.
-- Matching `settings_reset` artifacts erase saved Bluetooth/settings data.
+- `zitaotech_q10-zmk.uf2` - standalone Q10 Bluetooth keyboard firmware.
+- `zitaotech_q10_settings_reset-zmk.uf2` - clear saved Q10 Bluetooth/settings
+  data before pairing directly with a computer.
 
-Flash each device by holding its existing bootloader button until the UF2
-drive appears, then copying the matching file to that drive.
-
-Both dongles are BLE split centrals: connect one dongle by USB, then connect
-the Q10 to that dongle over Bluetooth. Only flash one dongle firmware at a
-time.
+Flash each file by holding the Q10 bootloader button until the UF2 drive
+appears, then copying the matching file to that drive.
 
 ## First pairing
 

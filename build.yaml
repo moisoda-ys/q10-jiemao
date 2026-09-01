@@ -1,20 +1,7 @@
 ---
 include:
-  # Original nRF52840/ST7789 dongle. It is a BLE split central for the Q10.
-  - board: sofle_dongle
-    shield: st7789_display
-    snippet: studio-rpc-usb-uart
-    artifact-name: q10_st7789_dongle
-  - board: nice_nano_v2
-    shield: q10_dongle dongle_display
-    snippet: studio-rpc-usb-uart
   - board: zitaotech_q10
 
-  # Flash these once to clear saved Bluetooth/settings data.
-  - board: sofle_dongle
-    shield: st7789_display;settings_reset
-    artifact-name: q10_st7789_dongle_settings_reset
-  - board: nice_nano_v2
-    shield: settings_reset
+  # Flash this once before pairing the Q10 directly with a computer.
   - board: zitaotech_q10
     shield: settings_reset
